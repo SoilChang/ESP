@@ -1,0 +1,77 @@
+<template name="home">
+	<!-- slider -->
+	<div class="slider">
+	    <ul class="slides">
+	      <li>
+	        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+	        <div class="caption center-align">
+	          <h3>This is our big Tagline!</h3>
+	          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+	        </div>
+	      </li>
+	      <li>
+	        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+	        <div class="caption left-align">
+	          <h3>Left Aligned Caption</h3>
+	          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+	        </div>
+	      </li>
+	      <li>
+	        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+	        <div class="caption right-align">
+	          <h3>Right Aligned Caption</h3>
+	          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+	        </div>
+	      </li>
+	      <li>
+	        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+	        <div class="caption center-align">
+	          <h3>This is our big Tagline!</h3>
+	          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+	        </div>
+	      </li>
+	    </ul>
+	</div>
+
+	<!-- content -->
+	<div class="row">
+		<div id="home_newsfeed" class="col s8 m8 l8">
+			<a id="home_firstButton" class="waves-effect waves-light btn">New Hightlights</a>
+			<a id="home_secondButton" class="waves-effect waves-light btn">Perspective students</a>
+			<div id="home_firstTab">
+				{{> home_firstTab}}
+			</div>
+			<div id="home_secondTab">
+				{{> home_secondTab}}
+			</div>
+		</div>
+		<div id="home_aboutUs" class="col s4 m4 l4">
+			<!-- collapsible -->
+			<ul class="collapsible" data-collapsible="accordion">
+			   <li>
+			     <div class="collapsible-header">About Us
+			     <i class="material-icons right">play_arrow</i></div>
+			     <div class="collapsible-body"><p>Hello World</p></div>
+			   </li>
+			   <li>
+			     <div class="collapsible-header">
+			     	Quotes on ESP
+			     	<i class="material-icons right">play_arrow</i></div>
+			     <div class="collapsible-body"><p>Hello World</p></div>
+			   </li>
+			   <li>
+			     <div class="collapsible-header">
+			     	Gallery
+			     	<i class="material-icons right">play_arrow</i></div>
+			     <div class="collapsible-body"><p>Hello World</p></div>
+			   </li>
+			   <li>
+			     <div class="collapsible-header">
+			     	Contant Us
+			     	<i class="material-icons right">play_arrow</i></div>
+			     <div class="collapsible-body"><p>Hello World</p></div>
+			   </li>
+			 </ul>
+		</div>
+	</div>
+</template>
