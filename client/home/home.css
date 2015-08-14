@@ -1,16 +1,13 @@
 #home_newsfeed{
-	display: inline-block;
-	vertical-align: top;
 	min-height: 100%;
 	height: 1000px;
-
+	/*min-width: 615px;*/
 }
 
 #home_aboutUs{
-	display: inline-block;
-	vertical-align: top;
 	min-height: 100%;
 	height: 300px;
+	/*min-width: 285px;*/
 }
 
 #home_firstTab{
