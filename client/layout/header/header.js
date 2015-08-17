@@ -3,7 +3,7 @@ Template.header.onRendered(function(){
 	$(".button-collapse").sideNav();
 
 	// enable dropdown
-	$('.dropdown-button').dropdown({
+	$('#dropdown_button_1').dropdown({
 	      inDuration: 300,
 	      outDuration: 225,
 	      constrain_width: false, // Does not change width of dropdown to that of the activator

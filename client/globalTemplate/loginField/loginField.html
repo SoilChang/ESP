@@ -1,0 +1,9 @@
+<template name="loginField">
+	{{#if currentUser}}
+		<p>{{loadUsername}}</p>
+	{{else}}
+		<a href="{{pathFor 'login'}}" class="waves-effect waves-green btn">Log in</a>
+	{{/if}}
+	 
+		
+</template>

@@ -1,7 +1,15 @@
 <template name="header">
 
 	<div id="logoBanner">
-		<img src="/images/utility/NUSlogo.png" >
+		<div class="row">
+			<img src="/images/utility/NUSlogo.png" class="col s3 m3 l3">
+			
+			<div class="col s3 m3 l3 right" id="header_loginDropdown">
+				{{>loginField}}
+			</div>
+			
+		</div>
+		
 	</div>
 	<nav>
 	    <div class="nav-wrapper #fb8c00 orange darken-1">
@@ -13,7 +21,7 @@
 	        <li><a href="#">Awards</a></li>
 	        <li>
 	        	<!-- Dropdown Trigger -->
-	        	 <a class='dropdown-button' href='#' data-activates='dropdown1'>ESP Lion</a>
+	        	 <a id="dropdown_button_1" class='dropdown-button' href='#' data-activates='dropdown1'>ESP Lion</a>
 	        	 <!-- Dropdown Structure -->
 	        	 <ul id='dropdown1' class='dropdown-content'>
 	        	   <li><a href="#">Vision</a></li>
