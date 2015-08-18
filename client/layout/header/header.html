@@ -4,7 +4,7 @@
 		<div class="row">
 			<img src="/images/utility/NUSlogo.png" class="col s3 m3 l3">
 			
-			<div class="col s3 m3 l3 right" id="header_loginDropdown">
+			<div class="col s5 m5 l5 right" id="header_loginDropdown">
 				{{>loginField}}
 			</div>
 			
@@ -13,11 +13,16 @@
 	</div>
 	<nav>
 	    <div class="nav-wrapper #fb8c00 orange darken-1">
-	      <a href="#!" class="brand-logo">Logo</a>
+	    	<!-- web logo -->
+	      <a href="#!" class="brand-logo">ESP</a>
+
+	      <!-- mobile logo -->
 	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+	      <!-- web display -->
 	      <ul class="right hide-on-med-and-down">
 	        <li><a href="#">Home</a></li>
-	        <li><a href="#">Newsfeeds</a></li>
+	        <li><a href="#">Timetable</a></li>
 	        <li><a href="#">Awards</a></li>
 	        <li>
 	        	<!-- Dropdown Trigger -->
@@ -30,13 +35,21 @@
 	        	 </ul>
 	        </li>
 	        <li><a href="#">Games</a></li>
+	        {{#if currentUser}}
+	        <li><a href="{{pathFor 'profile'}}">Profile</a></li>
+	        {{/if}}
 	      </ul>
+
+	      <!-- mobile display -->
 	      <ul class="side-nav" id="mobile-demo">
 	        <li><a href="#">Home</a></li>
-	        <li><a href="#">Newsfeeds</a></li>
+	        <li><a href="#">Timetable</a></li>
 	        <li><a href="#">Awards</a></li>
 	        <li><a href="#">ESP Lion</a></li>
 	        <li><a href="#">Games</a></li>
+	        {{#if currentUser}}
+	        <li><a href="{{pathFor 'profile'}}">Profile</a></li>
+	        {{/if}}
 	      </ul>
 	    </div>
 	</nav>

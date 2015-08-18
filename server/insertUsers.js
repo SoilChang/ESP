@@ -4,7 +4,9 @@ var list = [
 		username: "Chang Ho Huan",
 		email:"a0133370@u.nus.edu",
 		year: 2,
-		password:"a0133370"
+		password:"a0133370",
+		rank:"novice",
+		matricNumber:"a0133370r"
 	}
 ];
 
