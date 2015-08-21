@@ -14,5 +14,5 @@ Template.login.events({
 		})
 		
 
-		},
+	},
 });

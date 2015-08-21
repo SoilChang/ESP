@@ -6,7 +6,8 @@ var list = [
 		year: 2,
 		password:"a0133370",
 		rank:"novice",
-		matricNumber:"a0133370r"
+		matricNumber:"a0133370r",
+		lastLogin:undefined,
 	}
 ];
 
@@ -19,6 +20,8 @@ for(var i=0; i<len; i++){
 		Accounts.onCreateUser(function(options,user){
 			user.type=list[i].type;
 			user.year = list[i].year;
+			user.email=list[i].email;
+			user.lastLogin = new Date();
 			if(options.profile){
 				user.profile = options.profile;
 			}
@@ -27,9 +30,8 @@ for(var i=0; i<len; i++){
 
 		// create users
 		Accounts.createUser({
-			username:list[i].username,
-			email:list[i].email,
-			password:list[i].password
+			username:list[i].username,	
+			password:list[i].password,
 		});
 		
 	}

@@ -1,0 +1,34 @@
+<template name="achievements">
+	<div id="achievements_rightbar">
+		<ul class="section table-of-contents" >
+	       <li><a href="#badges">Badges</a></li>
+	       <li><a href="#achievements">Achievements</a></li>
+	    </ul>
+	</div>
+
+		<!-- title bar -->
+	<div style="background-color:#FF9147">
+		<div class="personalInfo_title container section scrollspy" id="badges">
+			Badges
+		</div>
+		<!-- information rendering -->
+		<div class="container">
+			{{#each loadUserData}}
+
+				
+			{{/each}}
+		</div>
+		
+		<!-- title bar -->
+		<div class="personalInfo_title container section scrollspy" id="achievements">
+			Talks
+		</div>
+				<!-- information rendering -->
+		<div class="container">
+			{{#each loadUserData}}
+				
+			{{/each}}
+		</div>
+	</div>
+
+</template>

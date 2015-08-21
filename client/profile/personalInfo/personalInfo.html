@@ -20,7 +20,8 @@
 				<h5>Name:{{username}}</h5>
 				<h5>Year:{{year}}</h5>
 				<h5>Matriculation Number:{{matricNumber}}</h5>
-				<h5>Rank:{{rank}}</h5>			
+				<h5>Rank:{{rank}}</h5>
+				<h5>Last login: {{date}}</h5>			
 			{{/each}}
 		</div>
 		
@@ -28,7 +29,15 @@
 		<div class="personalInfo_title container section scrollspy" id="contants">
 			Contacts
 		</div>
-	
+				<!-- information rendering -->
+		<div class="container">
+			{{#each loadUserData}}
+				<h5>Email:{{email}}</h5>
+				<h5>Handphone:{{handphone}}</h5>
+			{{/each}}
+		</div>
+
+
 	</div>
 	
 </template>

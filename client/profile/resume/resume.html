@@ -1,0 +1,86 @@
+<template name="resume">
+	<!-- fixed right side bar -->
+	<div id="resume_rightBar" >
+		<ul class="section table-of-contents" >
+	       <li><a href="#education">Education</a></li>
+	       <li><a href="#workExperience">Work Experience</a></li>
+	       <li><a href="#techincalSkills">Technical Skills</a></li>
+	       <li><a href="#cca">Co-Curricular Activity </a></li>
+ 	       <li><a href="#update_resume">Update Form </a></li>
+	     </ul>
+	</div>
+
+
+		<!-- title bar -->
+	<div style="background-color:#FF9147">
+		<div class="personalInfo_title container section scrollspy" id="education">
+			Education
+		</div>
+		<!-- information rendering -->
+		<div class="container">
+			{{#each loadUserData}}
+	
+			{{/each}}
+		</div>
+		
+		<!-- title bar -->
+		<div class="personalInfo_title container section scrollspy" id="workExperience">
+			Work Experience
+		</div>
+				<!-- information rendering -->
+		<div class="container">
+			{{#each loadUserData}}
+				
+			{{/each}}
+		</div>
+
+		<!-- title bar -->
+		<div class="personalInfo_title container section scrollspy" id="techincalSkills">
+			Technical Skills
+		</div>
+				<!-- information rendering -->
+		<div class="container">
+			{{#each loadUserData}}
+				
+			{{/each}}
+		</div>
+
+		<!-- title bar -->
+		<div class="personalInfo_title container section scrollspy" id="cca">
+			Co-Curricular Activity 
+		</div>
+				<!-- information rendering -->
+		<div class="container">
+			{{#each loadUserData}}
+				
+			{{/each}}
+		</div>
+
+		<!-- title bar -->
+		<div class="personalInfo_title container section scrollspy" id="update_resume">
+			Update
+		</div>
+				<!-- information rendering -->
+		<div class="container">
+			<form id="updateForm_resume">
+				<label for="education_form">Education</label>
+				<textarea name="education_form" id="education_form" cols="30" rows="10"></textarea>
+
+				<label for="workExperience_form">Work Experience</label>
+				<textarea name="workExperience_form" id="workExperience_form" cols="30" rows="10"></textarea>
+
+				<label for="technicalSkills_form">Technical Skills</label>
+				<textarea name="technicalSkills_form" id="technicalSkills_form" cols="30" rows="10"></textarea>
+
+				<label for="cca_form">Co-Curricular Activities</label>
+				<textarea name="cca_form" id="cca_form" cols="30" rows="10"></textarea>
+	
+			
+				<input type="button" value="update">
+			</form>
+		</div>
+
+
+
+	</div>
+</template>
