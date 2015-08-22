@@ -8,6 +8,16 @@ var list = [
 		rank:"novice",
 		matricNumber:"a0133370r",
 		lastLogin:undefined,
+	},
+	{
+		type: "undergraduate",
+		username: "Jon Snow",
+		email:"b0133370@u.nus.edu",
+		year: 2,
+		password:"b0133370",
+		rank:"novice",
+		matricNumber:"b0133370r",
+		lastLogin:undefined,
 	}
 ];
 
@@ -32,6 +42,7 @@ for(var i=0; i<len; i++){
 		Accounts.createUser({
 			username:list[i].username,	
 			password:list[i].password,
+			email:list[i].email
 		});
 		
 	}

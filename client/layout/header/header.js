@@ -14,8 +14,4 @@ Template.header.onRendered(function(){
 });
 
 Template.header.helpers({
-	// to render data context for the dynamic route
-	loadLink:function(){
-		return Meteor.user();		
-	}
-})
+});
