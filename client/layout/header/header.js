@@ -12,3 +12,10 @@ Template.header.onRendered(function(){
 	      belowOrigin: true // Displays dropdown below the button
 	});
 });
+
+Template.header.helpers({
+	// to render data context for the dynamic route
+	loadLink:function(){
+		return Meteor.user();		
+	}
+})

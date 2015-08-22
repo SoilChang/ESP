@@ -17,3 +17,7 @@ Template.home.onRendered(function(){
     	$("#home_secondTab").show();
     });
 });
+
+Template.home.helpers({
+
+});

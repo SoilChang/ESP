@@ -36,7 +36,9 @@
 	        </li>
 	        <li><a href="#">Games</a></li>
 	        {{#if currentUser}}
+	        	{{#with loadLink}}
 	        <li><a  href="{{pathFor 'profile'}}">Profile</a></li>
+	        	{{/with}}
 	        {{/if}}
 	      </ul>
 
@@ -48,7 +50,9 @@
 	        <li><a href="#">ESP Lion</a></li>
 	        <li><a href="#">Games</a></li>
 	        {{#if currentUser}}
+	        	{{#with loadLink}}
 	        <li><a href="{{pathFor 'profile'}}">Profile</a></li>
+	        	{{/with}}
 	        {{/if}}
 	      </ul>
 	    </div>
