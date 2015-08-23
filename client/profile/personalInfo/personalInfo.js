@@ -1,6 +1,9 @@
 Template.personalInfo.onRendered(function(){
 	// initiate spyscroll
 	$('.scrollspy').scrollSpy();
+
+	// offset fixed right bar
+	$('#personalInfo_rightBar').pushpin({ top: "200px" });
 });
 
 

@@ -35,16 +35,17 @@
 
 	<!-- content -->
 	<div class="row">
-		<div id="home_newsfeed" class="col s8 m8 l8 ">
-			<a id="home_firstButton" class="waves-effect waves-light btn">New Hightlights</a>
-			<a id="home_secondButton" class="waves-effect waves-light btn">Perspective students</a>
-			<div id="home_firstTab">
-				{{> home_firstTab}}
-			</div>
-			<div id="home_secondTab">
-				{{> home_secondTab}}
-			</div>
-		</div>
+		<div class="col s8">
+	      <ul class="tabs">
+	        <li class="tab col s3"><a class="active" href="#newsHightlights">News Hightlights</a></li>
+	        <li class="tab col s3"><a  href="#newActivities">New Activities</a></li>
+	      </ul>
+	    </div>
+	    <div id="newsHightlights" class="col s8">{{> home_firstTab}}</div>
+	    <div id="newActivities" class="col s8">{{> home_secondTab}}</div>
+
+
+		<!-- options on the right -->
 		<div id="home_aboutUs" class="col s4 m4 l4">
 			<!-- collapsible -->
 			<ul class="collapsible" data-collapsible="accordion">

@@ -16,6 +16,9 @@ Template.home.onRendered(function(){
     	$("#home_firstTab").hide();
     	$("#home_secondTab").show();
     });
+
+    // initialise tabs
+    $('ul.tabs').tabs();
 });
 
 Template.home.helpers({
