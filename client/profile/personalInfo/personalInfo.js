@@ -11,3 +11,22 @@ Template.personalInfo.helpers({
 		}
 	},
 });
+
+Template.personalInfo.events({
+	'submit form':function(e,t){
+		e.preventDefault();
+
+		// collect all the data into an object
+		var update = {
+			handphone: $(e.target).find('[name=handPhone_form]').val(),	
+		}
+
+		// remove unfilled keys
+		if( !update.handphone.trim() ){
+			update = _.omit(update,"handphone")
+		}	
+	
+		Meteor.call("updateContact", update);
+
+	},
+})

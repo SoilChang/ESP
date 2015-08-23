@@ -1,11 +1,31 @@
 Template.resume.events({
-	'submit #updateForm_resume':function(e,t){
+	'submit form':function(e,t){
 		e.preventDefault();
-		var education = $('[name=education_form]').val();
-		var workExperience = $('[name=workExperience_form]').val();
-		var workExperience = $('[name=workExperience_form]').val();
-		var cca = $('[name=cca_form]').val();
-		
+
+		// collect all the data into an object
+		var update = {
+			education: $(e.target).find('[name=education_form]').val(),
+			workExperience : $(e.target).find('[name=workExperience_form]').val(),
+			technicalSkills :$(e.target).find('[name=technicalSkills_form]').val(),
+			cca :$(e.target).find('[name=cca_form]').val()
+		}
+
+	
+		// remove unfilled keys
+		if( !update.education.trim() ){
+			update = _.omit(update,"education")
+		}	
+		if( !update.workExperience.trim() ){
+			update = _.omit(update,"workExperience")
+		}
+		if( !update.technicalSkills.trim()){
+			update = _.omit(update,"technicalSkills")
+		}
+		if( !update.cca.trim()){
+			update = _.omit(update,"cca")
+		}
+
+		Meteor.call("updateResume", update);
 
 	},
 })

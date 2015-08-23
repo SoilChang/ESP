@@ -18,9 +18,9 @@
 		</div>
 		<!-- information rendering -->
 		<div class="container">
-			{{#each loadUserData}}
-	
-			{{/each}}
+			{{#with loadOwnData}}
+				{{education}}
+			{{/with}}
 		</div>
 		
 		<!-- title bar -->
@@ -29,9 +29,9 @@
 		</div>
 				<!-- information rendering -->
 		<div class="container">
-			{{#each loadUserData}}
-				
-			{{/each}}
+			{{#with loadOwnData}}
+				{{workExperience}}
+			{{/with}}
 		</div>
 
 		<!-- title bar -->
@@ -40,9 +40,9 @@
 		</div>
 				<!-- information rendering -->
 		<div class="container">
-			{{#each loadUserData}}
-				
-			{{/each}}
+			{{#with loadOwnData}}
+				{{technicalSkills}}
+			{{/with}}
 		</div>
 
 		<!-- title bar -->
@@ -51,9 +51,9 @@
 		</div>
 				<!-- information rendering -->
 		<div class="container">
-			{{#each loadUserData}}
-				
-			{{/each}}
+			{{#with loadOwnData}}
+				{{cca}}
+			{{/with}}
 		</div>
 
 		<!-- title bar -->
@@ -76,7 +76,7 @@
 				<textarea name="cca_form" id="cca_form" cols="30" rows="10"></textarea>
 	
 			
-				<input type="button" value="update">
+				<input type="submit" value="update">
 			</form>
 		</div>
 
