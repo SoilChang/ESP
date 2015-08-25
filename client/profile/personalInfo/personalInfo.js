@@ -3,7 +3,7 @@ Template.personalInfo.onRendered(function(){
 	$('.scrollspy').scrollSpy();
 
 	// offset fixed right bar
-	$('#personalInfo_rightBar').pushpin({ top: "200px" });
+	$('#personalInfo_rightBar').pushpin({top: 0 ,offset:300});
 });
 
 

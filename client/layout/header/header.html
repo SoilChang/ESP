@@ -14,14 +14,14 @@
 	<nav>
 	    <div class="nav-wrapper #fb8c00 orange darken-1">
 	    	<!-- web logo -->
-	      <a href="#!" class="brand-logo">ESP</a>
+	      <a href="{{pathFor 'home'}}" class="brand-logo"><img src="images/utility/espWordLogo.png" alt="ESP" width="140"></a>
 
 	      <!-- mobile logo -->
-	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	      <a href="{{pathFor 'home'}}" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
 	      <!-- web display -->
 	      <ul class="right hide-on-med-and-down">
-	        <li><a href="#">Home</a></li>
+	        <li><a href="{{pathFor 'home'}}">Home</a></li>
 	        <li><a href="#">Timetable</a></li>
 	        <li><a href="#">Awards</a></li>
 	        <li>
@@ -44,7 +44,7 @@
 
 	      <!-- mobile display -->
 	      <ul class="side-nav" id="mobile-demo">
-	        <li><a href="#">Home</a></li>
+	        <li><a href="{{pathFor 'home'}}">Home</a></li>
 	        <li><a href="#">Timetable</a></li>
 	        <li><a href="#">Awards</a></li>
 	        <li><a href="#">ESP Lion</a></li>
@@ -57,9 +57,5 @@
 	      </ul>
 	    </div>
 	</nav>
-	<div id="underBanner" style="color:white;">
-		<h4>Engineering Science Programme</h4>
-		<h5>Faculty of Engineering</h5>
-	</div>
 
 </template>

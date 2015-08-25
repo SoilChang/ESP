@@ -1,28 +1,14 @@
 <template name="home_firstTab">
 	<div class="row">
-		<!-- first -->
-		<div class="home_newsBlock">
-			<div class="col s4 m4 l8" style="display:inline-block; width:100px;">
-				<img src="/images/home/ProfWang.jpg" width="80" >
-			</div>
-			<div class="col s8 m8 l8" style="display:inline-block; width:500px;">
-				<p>Prof Wang Chien Ming has been awarded the status of Outstanding Reviewer for Engineering Structures (one of the best international journals in structures)
-	Prof Wang Chien Ming has been awarded the status of Outstanding Reviewer for Engineering Structures (one of the best international journals in structures). This status, achieved in December 2014, is given for those reviewers within the top 10th percentile of reviewers for the Journal, in terms of the number of manuscript reviews completed in the last two years. For Engineering Structures, this meant a minimum of 6 reviews in two years. The award certificate is given in the attached pdf file.</p>
-			</div>
-		</div>
-		
-
-		<!-- second -->
-		<div class="home_newsBlock">
-			<div class="col s4 m4 l8" style="display:inline-block; width:100px;">
-				<img src="/images/home/EnergyInnovationChallenge.jpg" width="80" >
-			</div>
-			<div class="col s8 m8 l8" style="display:inline-block; width:500px;">
-				<p>ESP team wins 2nd prize and Merit award at Energy Innovation Challenge 2015
-ENGINEERING Science Programme team comprising Ling Evan, Lim Zeming, Eugene Soh and Tan Yan Han have clinched the 2nd prize and Merit award at the Energy Innovation Challenge 2015 organised by the Institution of Engineers Singapore in conjunction with the World Engineers Summit. Facing strong competition from 22 teams comprising local and international universities, they walked away with a cash prize of $6,000 and a trophy. ESP will like to congratulate them for their achievements!
-Please click here for the report</p>
+	{{#each newActivity}}
+		<div class="col s12">		
+			<img src="{{picture}}" width="100" class="col s2" >
+			
+			<div class="col s10">
+				<h5>{{title}}</h5>
+				<p>{{content}}</p>
 			</div>
 		</div>
-
+	{{/each}}		
 	</div>
 </template>

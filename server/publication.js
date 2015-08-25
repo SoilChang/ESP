@@ -12,4 +12,8 @@ Meteor.publish("allUserData",function(){
 		year:1,
 	}
 	});
+});
+
+Meteor.publish("activityCollection",function(){
+	return ActivityCollection.find();
 })
