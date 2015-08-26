@@ -1,5 +1,5 @@
 <template name="achievements">
-	<div id="achievements_rightbar">
+	<div id="achievements_rightbar" class="col s2 offset-s8">
 		<ul class="section table-of-contents" >
 	       <li><a href="#badges">Badges</a></li>
 	       <li><a href="#achievements">Achievements</a></li>
@@ -7,12 +7,12 @@
 	</div>
 
 		<!-- title bar -->
-	<div style="background-color:#FF9147">
-		<div class="personalInfo_title container section scrollspy" id="badges">
+	<div style="background-color:#FF9147" class="col s10">
+		<div class="personalInfo_title  section scrollspy" id="badges">
 			Badges
 		</div>
 		<!-- information rendering -->
-		<div class="container">
+		<div >
 			{{#each loadUserData}}
 
 				
@@ -20,11 +20,11 @@
 		</div>
 		
 		<!-- title bar -->
-		<div class="personalInfo_title container section scrollspy" id="achievements">
+		<div class="personalInfo_title  section scrollspy" id="achievements">
 			Talks
 		</div>
 				<!-- information rendering -->
-		<div class="container">
+		<div >
 			{{#each loadUserData}}
 				
 			{{/each}}

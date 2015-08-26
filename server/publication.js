@@ -16,4 +16,8 @@ Meteor.publish("allUserData",function(){
 
 Meteor.publish("activityCollection",function(){
 	return ActivityCollection.find();
+});
+
+Meteor.publish("moduleInfo",function(){
+	return ModuleInfo.find();
 })

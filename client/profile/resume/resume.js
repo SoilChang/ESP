@@ -28,4 +28,8 @@ Template.resume.events({
 		Meteor.call("updateResume", update);
 
 	},
+});
+
+Template.resume.onRendered(function(){
+	$('#resume_rightBar').pushpin({top: 0 ,offset:300});
 })

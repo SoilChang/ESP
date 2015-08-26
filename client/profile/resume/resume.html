@@ -1,6 +1,6 @@
 <template name="resume">
 	<!-- fixed right side bar -->
-	<div id="resume_rightBar" >
+	<div id="resume_rightBar" class="col s2 offset-s8">
 		<ul class="section table-of-contents" >
 	       <li><a href="#education">Education</a></li>
 	       <li><a href="#workExperience">Work Experience</a></li>
@@ -12,56 +12,56 @@
 
 
 		<!-- title bar -->
-	<div style="background-color:#FF9147">
-		<div class="personalInfo_title container section scrollspy" id="education">
+	<div style="background-color:#FF9147" class="col s10">
+		<div class="personalInfo_title  section scrollspy" id="education">
 			Education
 		</div>
 		<!-- information rendering -->
-		<div class="container">
+		<div >
 			{{#with loadOwnData}}
 				{{education}}
 			{{/with}}
 		</div>
 		
 		<!-- title bar -->
-		<div class="personalInfo_title container section scrollspy" id="workExperience">
+		<div class="personalInfo_title  section scrollspy" id="workExperience">
 			Work Experience
 		</div>
 				<!-- information rendering -->
-		<div class="container">
+		<div >
 			{{#with loadOwnData}}
 				{{workExperience}}
 			{{/with}}
 		</div>
 
 		<!-- title bar -->
-		<div class="personalInfo_title container section scrollspy" id="techincalSkills">
+		<div class="personalInfo_title  section scrollspy" id="techincalSkills">
 			Technical Skills
 		</div>
 				<!-- information rendering -->
-		<div class="container">
+		<div >
 			{{#with loadOwnData}}
 				{{technicalSkills}}
 			{{/with}}
 		</div>
 
 		<!-- title bar -->
-		<div class="personalInfo_title container section scrollspy" id="cca">
+		<div class="personalInfo_title  section scrollspy" id="cca">
 			Co-Curricular Activity 
 		</div>
 				<!-- information rendering -->
-		<div class="container">
+		<div >
 			{{#with loadOwnData}}
 				{{cca}}
 			{{/with}}
 		</div>
 
 		<!-- title bar -->
-		<div class="personalInfo_title container section scrollspy" id="update_resume">
+		<div class="personalInfo_title  section scrollspy" id="update_resume">
 			Update
 		</div>
 				<!-- information rendering -->
-		<div class="container">
+		<div >
 			<form id="updateForm_resume">
 				<label for="education_form">Education</label>
 				<textarea name="education_form" id="education_form" cols="30" rows="10"></textarea>
