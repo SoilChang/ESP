@@ -1,3 +1,45 @@
 <template name="moduleForum">
-	Hello World
+<div class="row" id="moduleForum_wrapper">
+	<div class="col s12">
+		<h1 style="text-align:center">{{code}}</h1> <hr>
+	</div>
+	<div class="col s12">
+		<p>{{description}}</p> <hr>
+	</div>
+	<h5>Post your own thoughts</h5>
+	<div class="col s12 input-field">
+		<select id="moduleRating"> 
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+		<label >Module Rating</label>
+	</div>
+	<form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Comments</label>
+        </div>
+      </div>
+    </form>
+
+    <!-- Switch -->
+    <p>post anonymousely</p>
+      <div class="switch">
+        <label>
+          Off
+          <input type="checkbox">
+          <span class="lever"></span>
+          On
+        </label>
+      </div>
+</div>
 </template>
