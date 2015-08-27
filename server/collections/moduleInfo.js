@@ -3,12 +3,18 @@ var list=[
 	{
 		sem:1.1,
 		code:"PC1433", 	
-		title:"Mechenics and Weaves"
+		title:"Mechanics and Waves",
+		description:"abc",
+		preclusion:["abc1234", "ts333"],
+		prerequisite:["std1234","abc6789"]
 	},
 	{
 		sem:1.1,
 		code:"ESP1100",
-		title:"Weaves",	
+		title:"Waves",
+		description:"sdf",
+		preclusion:['abs'],
+		prerequisite:['asdf'],	
 	},
 	
 
@@ -27,7 +33,7 @@ var list=[
 
 var len = list.length;
 for(var i=0; i<len; i++){
-	var object = ModuleInfo.findOne({code:list[i].title});
+	var object = ModuleInfo.findOne({code:list[i].code});
 	if(!object){
 		ModuleInfo.insert(list[i]);
 	}else{

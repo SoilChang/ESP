@@ -1,8 +1,9 @@
-.yearone_box{
+.yearX_box{
 	border:solid black 3px;
 	border-radius: 10px;
+	height: 220px;
 }
-.yearone_code{
+.yearX_green{
 	min-height: 30px;
 	background-color: #00CC66;
 	margin-left: -11px;
@@ -11,7 +12,7 @@
 	text-align: center;
 }
 
-.yearone_title{
+.yearX_white{
 	min-height: 70px;
 
 }

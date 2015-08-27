@@ -24,16 +24,7 @@
 	        <li><a href="{{pathFor 'home'}}">Home</a></li>
 	        <li><a href="{{pathFor 'modules'}}">Modules</a></li>
 	        <li><a href="#">Awards</a></li>
-	        <li>
-	        	<!-- Dropdown Trigger -->
-	        	 <a id="dropdown_button_1" class='dropdown-button' href='#' data-activates='dropdown1'>ESP Lion</a>
-	        	 <!-- Dropdown Structure -->
-	        	 <ul id='dropdown1' class='dropdown-content'>
-	        	   <li><a href="#">Vision</a></li>
-	        	   <li><a href="#">Mission</a></li>
-	        	   <li><a href="#">Achievements</a></li>
-	        	 </ul>
-	        </li>
+	        <li><a href="{{pathFor 'espLion'}}">ESP Lion</a></li>
 	        <li><a href="#">Games</a></li>
 	        {{#if currentUser}}
 	        	{{#with loadOwnData}}

@@ -21,22 +21,23 @@ var list = [
 	}
 ];
 
+// customise created users, this code has to exist before the action of creating users
+Accounts.onCreateUser(function(options,user){
+	user.type=list[i].type;
+	user.year = list[i].year;
+	user.email=list[i].email;
+	user.lastLogin = new Date();
+	if(options.profile){
+		user.profile = options.profile;
+	}
+	return user;
+});
+
 
 var len = list.length;
 for(var i=0; i<len; i++){
 	var object = Meteor.users.findOne({username:list[i].username});
 	if(!object){
-		// customise created users, this code has to exist before the action of creating users
-		Accounts.onCreateUser(function(options,user){
-			user.type=list[i].type;
-			user.year = list[i].year;
-			user.email=list[i].email;
-			user.lastLogin = new Date();
-			if(options.profile){
-				user.profile = options.profile;
-			}
-			return user;
-		});
 
 		// create users
 		Accounts.createUser({
@@ -44,6 +45,7 @@ for(var i=0; i<len; i++){
 			password:list[i].password,
 			email:list[i].email
 		});
+
 		
 	}
 }
