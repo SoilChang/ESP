@@ -47,3 +47,8 @@ materialize:materialize
 
 # tracking error
 meteorhacks:kadira
+
+
+#for managing collection
+aldeed:collection2
+aldeed:autoform
