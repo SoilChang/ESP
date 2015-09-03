@@ -8,15 +8,21 @@
 			<p>{{description}}</p> 		
 		</div>
 		<div class="row" >
-			<p>Module Facilitators: {{printArray facilitator}}</p>
+			<p><span style="font-size:20px;">Module Facilitators</span>: {{printArray facilitator}}</p>
 		</div>
 		<div class="row">
-			<p>Average Rating: {{getAverage totalRating numberOfvotes}} by {{voter}} people</p>
+			<p>
+				<span style="font-size:20px;">Average Rating</span>: 
+				<span style="font-size:20px; color:green">{{computeAverage}}</span> 
+				<span style="font-size:20px;">by</span> 
+				<span style="font-size:20px; color:green">{{numberOfVoter}} </span>
+				<span style="font-size:20px;">people</span>
+			</p>
 		</div>
-		<div class="row">
-			<p>Rate this module</p>
-			  <select id="moduleForum_select" class="browser-default">
-			    <option value="0" disabled selected>Rate This module</option>
+		<div class="row">			
+			<p style="color:red">{{haveRated}}</p>
+			  <select id="moduleForum_select" class="input-field">
+			    <option value="0" disabled selected>Please select</option>
 			    <option value="1">1</option>
 			    <option value="2">2</option>
 			    <option value="3">3</option>
@@ -28,19 +34,44 @@
 			    <option value="9">9</option>
 			    <option value="10">10</option>
 			  </select>
-			  <a class="waves-effect btn right" id="rateThisModule">Rate</a>
+			  <a class="waves-effect btn right" id="rateThisModule" >Rate</a>
 		</div>
 			
 		<hr>
 	</div>
 
+	<!-- comment roll -->
+	<div class="row">
+		<hr>
+		<h3>Comments</h3>
+		{{#each commentRoll}}
+			<div class="row">
+				{{#if nodata}}
+					<h5>No Comments Available</h5>
+				{{else}}
+					<div style="text-align:left;" class="col s10 offset-s1">
+						<p>
+							{{checkIdentity insertedBy anonymity}} says:
+							<br>
+							{{comments}}
+							<br><br>
+							Module facilitator:{{printArray facilitator}}
+							<br><br>
+							{{howLongAgo insertDate}}
+						</p>
+					</div>
+				{{/if}}
+			</div>
+		{{/each}}
+	</div>
+
 
 	<!-- post comments -->
 	<h5>Post your own thoughts</h5>
-	<form>
+	<form style="background-color:#6666FF; border-radius:10px;">
 		<div class="row">
 			<div class="col s6">
-				<label>Appear anonymous to non-students</label>
+				<p>Appear anonymous to non-students</p>
 			  <div class="switch">
 			    <label>
 			      Off

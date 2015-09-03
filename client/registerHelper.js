@@ -15,7 +15,7 @@ Template.registerHelper("getAverage",function(sum,amount){
 
 Template.registerHelper("printArray",function(array){
 	// check for array validaty 
-	if(array === null){
+	if(!array){
 		return;
 	}
 
@@ -36,6 +36,17 @@ Template.registerHelper("printArray",function(array){
 Template.registerHelper("cardView",function(){
 	var option = Session.get("home_firstTab_display");
 	return option;
+});
+
+// format time
+Template.registerHelper('formatTime', function(context, options) {
+  if(context)
+    return moment(context).format('hh:mm , DD/MM/YYYY');
+});
+
+Template.registerHelper('howLongAgo', function(context, options) {
+  if(context)
+    return moment(context).fromNow();
 });
 
 // the display is set by default to be card view

@@ -10,8 +10,7 @@ var list=[
 		prerequisite:["std1234","abc6789"],
 		comments:[],
 		voters:[],
-		numberOfvotes:0,
-		totalRating:0,
+		rating:[],		
 	},
 	{
 		sem:1.1,
@@ -23,8 +22,7 @@ var list=[
 		prerequisite:['asdf'],	
 		comments:[],
 		voters:[],
-		numberOfvotes:0,
-		totalRating:0,
+		rating:[],
 	},
 	
 
