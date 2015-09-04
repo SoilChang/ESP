@@ -63,7 +63,7 @@ Template.moduleForum.helpers({
 			total += ratings[i];
 		}
 
-		return total/numberOfPeople;
+		return Math.ceil(total/numberOfPeople);
 	},
 
 	numberOfVoter:function(){

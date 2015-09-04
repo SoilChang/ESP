@@ -36,8 +36,8 @@ for(var i=0; i<len; i++){
 	if(!object){
 		ModuleInfo.insert(list[i]);
 	}else{
-		ModuleInfo.remove({_id: object._id});
-		_.extend( list[i], {_id:object._id});
-		ModuleInfo.insert(list[i]);
+		// ModuleInfo.remove({_id: object._id});
+		// _.extend( list[i], {_id:object._id});
+		// ModuleInfo.insert(list[i]);
 	}
 }

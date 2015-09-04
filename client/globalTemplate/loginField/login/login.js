@@ -9,6 +9,9 @@ Template.login.events({
 		var password = $('[name=loginPassword]').val();
 
 		Meteor.loginWithPassword(email,password);
+		Accounts.onLoginFailure(function(){
+			Materialize.toast("email and password doesn't match!",200)
+		})
 		Accounts.onLogin(function(){
 			Router.go('home');
 		})

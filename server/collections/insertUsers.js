@@ -1,22 +1,26 @@
 var list = [
 	{
-		type: "undergraduate",
 		username: "Chang Ho Huan",
-		email:"a0133370@u.nus.edu",
-		year: 2,
 		password:"a0133370",
+		type: "undergraduate",
+		email:"a0133370@u.nus.edu",
+		year: 0,
+		matricYear: new Date(2014,8,1,0,0,0,0),
 		rank:"novice",
-		matricNumber:"a0133370r",
+		matricNumber:"A0133370R",
 		lastLogin:undefined,
+		rank:"novice",
+		exp: 0,
 	},
 	{
 		type: "undergraduate",
 		username: "Jon Snow",
 		email:"b0133370@u.nus.edu",
-		year: 2,
+		year: 0,
+		matricYear: new Date(2014,8,1,0,0,0,0),
 		password:"b0133370",
 		rank:"novice",
-		matricNumber:"b0133370r",
+		matricNumber:"B0133370R",
 		lastLogin:undefined,
 	}
 ];
@@ -27,6 +31,12 @@ Accounts.onCreateUser(function(options,user){
 	user.year = list[i].year;
 	user.email=list[i].email;
 	user.lastLogin = new Date();
+	user.matricYear = list[i].matricYear;
+	user.matricNumber = list[i].matricNumber;
+	user.rank = list[i].rank;
+	user.exp = list[i].exp;
+	user.at = list[i].at;
+	
 	if(options.profile){
 		user.profile = options.profile;
 	}
@@ -38,15 +48,28 @@ var len = list.length;
 for(var i=0; i<len; i++){
 	var object = Meteor.users.findOne({username:list[i].username});
 	if(!object){
-
 		// create users
 		Accounts.createUser({
 			username:list[i].username,	
 			password:list[i].password,
 			email:list[i].email
 		});
-
-		
 	}
 }
 
+
+// user update' year 
+Meteor.startup(function(){
+	console.log("server started");
+	var allUser = Meteor.users.find().fetch();
+	var length = allUser.length;
+
+	for(var i = 0; i< length; i++){
+		// set current year of student
+		var birth = moment(allUser[i].matricYear);
+		var today = moment(new Date());
+		var diff = Math.ceil(today.diff(birth,"years",true));
+		console.log("diff: "+diff.toString());
+		Meteor.users.update({_id:allUser[i]._id},{$set:{year:diff}});
+	}
+});

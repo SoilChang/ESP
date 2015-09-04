@@ -23,7 +23,7 @@
 				<h5>Year:{{year}}</h5>
 				<h5>Matriculation Number:{{matricNumber}}</h5>
 				<h5>Rank:{{rank}}</h5>
-				<h5>Last login: {{date}}</h5>	
+				<h5>Last login: {{howLongAgo lastLogin}}</h5>	
 				<h5>Email:{{email}}</h5>		
 			{{/with}}
 		</div>
@@ -35,7 +35,6 @@
 				<!-- information rendering -->
 		<div >
 			{{#with loadUserData}}
-				
 				<h5>Handphone:{{handphone}}</h5>
 			{{/with}}
 		</div>
