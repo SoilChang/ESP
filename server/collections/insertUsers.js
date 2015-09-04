@@ -43,7 +43,7 @@ Accounts.onCreateUser(function(options,user){
 	return user;
 });
 
-
+// creating new users if possible
 var len = list.length;
 for(var i=0; i<len; i++){
 	var object = Meteor.users.findOne({username:list[i].username});
@@ -60,7 +60,6 @@ for(var i=0; i<len; i++){
 
 // user update' year 
 Meteor.startup(function(){
-	console.log("server started");
 	var allUser = Meteor.users.find().fetch();
 	var length = allUser.length;
 
@@ -69,7 +68,6 @@ Meteor.startup(function(){
 		var birth = moment(allUser[i].matricYear);
 		var today = moment(new Date());
 		var diff = Math.ceil(today.diff(birth,"years",true));
-		console.log("diff: "+diff.toString());
 		Meteor.users.update({_id:allUser[i]._id},{$set:{year:diff}});
 	}
 });

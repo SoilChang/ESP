@@ -26,6 +26,8 @@ Meteor.methods({
 
 		if(_.has(update, "handphone") ){
 			Meteor.users.update({_id: currentUserId},{$set:{handphone:update.handphone}});
+		}else if(_.has(update, "secondaryEmail")){
+			Meteor.users.update({_id:currentUserId},{$set:{secondaryEmail:update.secondaryEmail}});
 		}
 	}
 });

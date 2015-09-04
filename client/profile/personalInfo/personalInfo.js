@@ -21,15 +21,18 @@ Template.personalInfo.events({
 
 		// collect all the data into an object
 		var update = {
-			handphone: $(e.target).find('[name=handPhone_form]').val(),	
+			handphone: $("#handPhone_form").val().trim(),	
+			secondaryEmail: $("#secondaryEmail_form").val().trim(),
 		}
-
+		console.log(update.secondaryEmail);
 		// remove unfilled keys
-		if( !update.handphone.trim() ){
-			update = _.omit(update,"handphone")
-		}	
+		if( !update.handphone ){
+			update = _.omit(update,"handphone");
+		}else if(!update.secondaryEmail){
+			update = _.omit(update,"secondaryEmail");
+		}
 	
 		Meteor.call("updateContact", update);
-
+		Materialize.toast("Submitted!",2000);
 	},
 })

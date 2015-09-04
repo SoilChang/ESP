@@ -19,12 +19,12 @@
 		<div >
 			{{#with loadUserData}}
 
-				<h5>Name:{{username}}</h5>
-				<h5>Year:{{year}}</h5>
-				<h5>Matriculation Number:{{matricNumber}}</h5>
-				<h5>Rank:{{rank}}</h5>
+				<h5>Name: {{username}}</h5>
+				<h5>Year: {{year}}</h5>
+				<h5>Matriculation Number: {{matricNumber}}</h5>
+				<h5>Rank: {{rank}}</h5>
 				<h5>Last login: {{howLongAgo lastLogin}}</h5>	
-				<h5>Email:{{email}}</h5>		
+				<h5>Email: {{email}}</h5>		
 			{{/with}}
 		</div>
 		
@@ -35,7 +35,8 @@
 				<!-- information rendering -->
 		<div >
 			{{#with loadUserData}}
-				<h5>Handphone:{{handphone}}</h5>
+				<h5>Handphone:{{ handphone }}</h5>
+				<h5>2nd Email:{{ secondaryEmail }}</h5>
 			{{/with}}
 		</div>
 
@@ -43,10 +44,19 @@
 			Update
 		</div>
 				<!-- information rendering -->
-		<div >
+		<div class="row">
 			<form>
-				<input name="handPhone_form" id="handPhone_form" type="text" placeholder="handphone">
-				<input type="submit" value="update">
+				<div class="input-field col s12">
+		          <input id="handPhone_form" type="text" class="validate">
+		          <label for="handPhone_form">Phone Number</label>
+		        </div>
+
+		        <div class="input-field col s12">
+		          <input id="secondaryEmail_form" type="email" class="validate">
+		          <label for="secondaryEmail_form">Secondary Email</label>
+		        </div>
+
+		        <input type="submit" id="contactForm">
 			</form>
 		</div>
 	</div>
