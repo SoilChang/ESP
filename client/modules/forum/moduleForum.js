@@ -11,6 +11,9 @@ Template.moduleForum.onRendered(function(){
 		var error = {};
 	}
 
+	// initialise text editor
+	$('#moduleForum_comments').froalaEditor();
+
 });
 
 Template.moduleForum.helpers({

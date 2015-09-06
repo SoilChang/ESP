@@ -1,5 +1,24 @@
-#moduleForum_wrapper{
-	background-color: rgba(51, 153, 255,0.5);
+.moduleForum_box{
+	background-color: #99FF66;
 	border-radius: 10px;
-	text-align: center;
+	border: solid 10px #00FF00;
+}
+
+.moduleForum_ratingBox{
+	background-color: #00CC66;
+
+}
+
+.moduleForum_eachComments{
+	background-color: #CCFFCC;
+	border-radius: 5px;
+	border:black 1px solid;
+}
+
+.moduleForum_eachComments_top{
+	background-color: #00CC66;
+
+}
+.moduleForum_eachComments_bot{
+	
 }

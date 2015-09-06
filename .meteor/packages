@@ -52,3 +52,6 @@ meteorhacks:kadira
 #for managing collection
 aldeed:collection2
 aldeed:autoform
+
+#text editor
+froala:editor
