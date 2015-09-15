@@ -49,23 +49,7 @@
 		<div class="col s12 moduleForum_box" style="margin-top:20px;">
 			<h3>Comments</h3>
 			{{#each commentRoll}}
-				<div class="row moduleForum_eachComments">
-					{{#if nodata}}
-						<h5>No Comments Available</h5>
-					{{else}}
-						<div style="text-align:left;">
-							<div class="col s12 moduleForum_eachComments_top">
-								{{checkIdentity insertedBy anonymity}} commented {{howLongAgo insertDate}}
-							</div>
-							<div class="col s12 moduleForum_eachComments_bot">
-								<br>
-								{{comments}}
-								<br><br>
-								Module facilitator:{{printArray facilitator}}
-							</div>
-						</div>
-					{{/if}}
-				</div>
+				{{ >comments}}
 			{{/each}}
 		</div>		
 	</div>
@@ -89,7 +73,7 @@
 				</div>
 			</div>	
 			<div class="row">
-				<div class="input-field col s12 fr-view">
+				<div class="input-field col s12">
 	            	<textarea id="moduleForum_comments" class="materialize-textarea" length="1000"></textarea>
 	            	<label for="moduleForum_comments">Comments</label>
 	            </div>

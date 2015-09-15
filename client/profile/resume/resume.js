@@ -32,4 +32,15 @@ Template.resume.events({
 
 Template.resume.onRendered(function(){
 	$('#resume_rightBar').pushpin({top: 0 ,offset:300});
+});
+
+Template.resume.helpers({
+	thereIsData:function(data){
+		if(data){
+			return data;
+		}else{
+			return "No data found"
+		}
+
+	}
 })

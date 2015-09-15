@@ -11,8 +11,7 @@ Template.moduleForum.onRendered(function(){
 		var error = {};
 	}
 
-	// initialise text editor
-	$('#moduleForum_comments').froalaEditor();
+
 
 });
 
@@ -78,32 +77,17 @@ Template.moduleForum.helpers({
 		return list.voters.length;
 	},
 	commentRoll:function(){
-		var wholeObject = ModuleInfo.findOne(this._id);
+		var allComments = ModuleComments.find({under:this.code},{sort:{insertDate:-1}, limit:20});
 		// check data retrieval 
-		if(!wholeObject){
+		if(!allComments){
 			return [{nodata:true}];
 		}
 
-		var comment = wholeObject.comments;
-		// check if really no comments
-		if(comment.length === 0){
-			return [{nodata:true}];
-		}
-		return comment
+	
+		return allComments
 	},
-	checkIdentity:function(insertedBy,anonymity){
-		if(anonymity){
-			var currentUser = Meteor.user();
-			if(!currentUser || currentUser.type != "undergraduate"){
-				return "Anonymous";
-			}else{
-				return insertedBy;
-			}
-		}else{
-			return insertedBy;
-		}
-		
-	}
+	
+	
 });
 
 Template.moduleForum.events({
@@ -137,22 +121,21 @@ Template.moduleForum.events({
 			insertDate: new Date(),
 			insertedBy: Meteor.user().username,
 			facilitator: this.facilitator,
+			under : this.code,
+			like:[],
 		};
-		var under = this.code;
-		console.log(typeof under);
+
 		// check if they have entered comments
 		if(!formData.comments){
 			Materialize.toast('Please enter comments!', 2000);
 			return;
 		}
-		var submit = confirm("Select Ok to confirm submit");
+		var submit = confirm("confirm submit? ");
 		if(submit){
-			Meteor.call("postComments",formData,under);
+			Meteor.call("postComments",formData);
 			Materialize.toast('Submitted!', 2000);
 		}
-		
-
-		console.log(formData);
-	}
+	},
+	
 });
 

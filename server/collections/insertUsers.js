@@ -1,5 +1,5 @@
 var list = [
-	{
+	{	
 		username: "Chang Ho Huan",
 		password:"a0133370",
 		type: "undergraduate",
@@ -22,6 +22,7 @@ var list = [
 		rank:"novice",
 		matricNumber:"B0133370R",
 		lastLogin:undefined,
+		exp: 0,
 	}
 ];
 
@@ -35,7 +36,10 @@ Accounts.onCreateUser(function(options,user){
 	user.matricNumber = list[i].matricNumber;
 	user.rank = list[i].rank;
 	user.exp = list[i].exp;
-	user.at = list[i].at;
+	if(list[i].type === "undergraduate"){
+		user._id = list[i].matricNumber;	
+	}
+	
 	
 	if(options.profile){
 		user.profile = options.profile;
@@ -52,7 +56,8 @@ for(var i=0; i<len; i++){
 		Accounts.createUser({
 			username:list[i].username,	
 			password:list[i].password,
-			email:list[i].email
+			email:list[i].email,
+
 		});
 	}
 }

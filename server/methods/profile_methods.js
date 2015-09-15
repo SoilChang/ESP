@@ -29,5 +29,9 @@ Meteor.methods({
 		}else if(_.has(update, "secondaryEmail")){
 			Meteor.users.update({_id:currentUserId},{$set:{secondaryEmail:update.secondaryEmail}});
 		}
+	},
+	updateLastLogin:function(){
+		var currentUserId = Meteor.userId();
+		Meteor.users.update({_id:currentUserId},{$set:{lastLogin:new Date()}});
 	}
 });

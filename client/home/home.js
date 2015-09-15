@@ -32,7 +32,6 @@ Template.home.onRendered(function(){
 
     // set display function
     setDisplay = function(option){
-        console.log("setDisplay called" + option);
         if(option === "card"){
             Session.set("home_firstTab_display", true);
             return;
@@ -42,6 +41,11 @@ Template.home.onRendered(function(){
             return;
         }
     };
+
+    setSortOrder = function(option){
+        Session.set("home_sortOrder", option);
+        return;
+    }
 });
 
 
@@ -53,6 +57,17 @@ Template.home.helpers({
             return "Card"
         }else{
             return "List"
+        }
+    },
+
+    displaySort: function(){
+        var displaySort = Session.get("home_sortOrder");
+
+        switch(displaySort){
+            case "talk": return "Talks";
+            case "date": return "Date";
+            case "competition": return "Competitions";
+            case "event": return "Events";
         }
     }
 });

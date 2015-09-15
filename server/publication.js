@@ -20,4 +20,9 @@ Meteor.publish("activityCollection",function(){
 
 Meteor.publish("moduleInfo",function(){
 	return ModuleInfo.find();
+});
+
+Meteor.publish("moduleComments",function(code){
+	check(code,String);
+	return ModuleComments.find({under:code});
 })

@@ -1,15 +1,19 @@
 <template name="achievements">
 	<div id="achievements_rightbar" class="col s2 offset-s8">
 		<ul class="section table-of-contents" >
-	       <li><a href="#badges">Badges</a></li>
-	       <li><a href="#achievements">Achievements</a></li>
+	       <li><a href="#competitions">Competitions</a></li>
+	       <li><a href="#workshops">Workshops</a></li>
+	       <li><a href="#talks">Talks</a></li>
+	       <li><a href="#ESPEvents">ESP Evnets</a></li>
+	       <li><a href="#others">Others</a></li>
 	    </ul>
 	</div>
 
 		<!-- title bar -->
 	<div style="background-color:#FF9147" class="col s10">
-		<div class="personalInfo_title  section scrollspy" id="badges">
-			Badges
+	
+		<div class="personalInfo_title  section scrollspy" id="competitions">
+			Competitions
 		</div>
 		<!-- information rendering -->
 		<div >
@@ -20,8 +24,41 @@
 		</div>
 		
 		<!-- title bar -->
-		<div class="personalInfo_title  section scrollspy" id="achievements">
+		<div class="personalInfo_title  section scrollspy" id="workshops">
+			Workshops
+		</div>
+				<!-- information rendering -->
+		<div >
+			{{#each loadUserData}}
+				
+			{{/each}}
+		</div>
+
+		<!-- title bar -->
+		<div class="personalInfo_title  section scrollspy" id="talks">
 			Talks
+		</div>
+				<!-- information rendering -->
+		<div >
+			{{#each loadUserData}}
+				
+			{{/each}}
+		</div>
+
+		<!-- title bar -->
+		<div class="personalInfo_title  section scrollspy" id="ESPEvents">
+			ESP Evnets
+		</div>
+				<!-- information rendering -->
+		<div >
+			{{#each loadUserData}}
+				
+			{{/each}}
+		</div>
+
+		<!-- title bar -->
+		<div class="personalInfo_title  section scrollspy" id="others">
+			Others
 		</div>
 				<!-- information rendering -->
 		<div >

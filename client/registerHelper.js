@@ -32,11 +32,7 @@ Template.registerHelper("printArray",function(array){
 	return string;
 });
 
-// this is to decide whether to display as card view or list view
-Template.registerHelper("cardView",function(){
-	var option = Session.get("home_firstTab_display");
-	return option;
-});
+
 
 // format time
 Template.registerHelper('formatTime', function(context, options) {
@@ -49,5 +45,7 @@ Template.registerHelper('howLongAgo', function(context, options) {
     return moment(context).fromNow();
 });
 
+
 // the display is set by default to be card view
 Session.setDefault("home_firstTab_display", true);
+Session.setDefault("home_sortOrder", "date");

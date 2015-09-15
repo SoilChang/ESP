@@ -25,10 +25,25 @@ Meteor.methods({
 			console.log(ModuleInfo.findOne(postId).rating.toString());
 		}
 	},
-	"postComments":function(formData,under){
+	"postComments":function(formData){
 		check(formData,Object);
-		check(under, String);
-		ModuleInfo.update({code:under},{$push:{comments:formData}});
+		
+		ModuleComments.insert(formData);
 
+	},
+	"likeComment":function(moduleCode){
+		check(moduleCode, String);
+		var currentUserId = Meteor.userId();
+		var likers = ModuleComments.findOne({under:moduleCode}).like;
+		if(_.indexOf(likers,currentUserId) >= 0){
+			// if can find, remove pull the user out from the set
+			var newList = _.without(likers,currentUserId );
+			ModuleComments.update({under:moduleCode},{$set:{like: newList}});
+			// ModuleComments.update({under:moduleCode},{$pull:{like:{$elemMatch:{currentUserId}}}});
+
+		}else{
+			// if can't find, insert the user
+			ModuleComments.update({under:moduleCode},{$addToSet:{like:currentUserId}});
+		}
 	}
 });
