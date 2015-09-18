@@ -1,0 +1,29 @@
+<template name="profile_sidebar">
+	<div class="row">
+		<div id="profile_logo" >
+		</div>
+		<div >
+		{{#each loadUserData}}
+			<p style="font-size:20px; color:blue; text-align:center;">
+				{{username}}
+			</p>
+			<hr>
+		{{/each}}
+		</div>
+		<div>
+		{{#with loadOwnData}}
+		<a href="{{pathFor 'profile'}}">
+			<p id="profile_personalInfo" class="profile_tabs">Personal Info</p>
+		</a>
+		<a href="{{pathFor 'profile_achievements'}}">
+			<p id="profile_achievements" class="profile_tabs">Achievements</p>
+		</a>
+		<a href="{{pathFor 'profile_resume'}}">
+			<p id="profile_resume" class="profile_tabs">Resume</p>
+		</a>
+
+			<p id="profile_message" class="profile_tabs">Message</p>
+		{{/with}}
+		</div>
+	</div>
+</template>

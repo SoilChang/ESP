@@ -1,0 +1,46 @@
+<template name="newsfeed">	
+<div class="row" >
+<div class="col s10 offset-s1" id="newsfeed_wrapper">
+	
+		<!-- content -->
+		<div class="row">
+		
+			<!-- options on the right -->
+			<div id="newsfeed_option" class="row">
+				
+					<!-- Dropdown Trigger -->
+					<div class="col s2"><br></div>
+					<a class='dropdown-button btn col s4 waves-effect waves-purple #90caf9 blue lighten-3 newsfeed_options' href='#' data-activates='dropdown1'>Sorted By:{{displaySort}}</a>
+					<!-- Dropdown Structure -->
+					<ul id='dropdown1' class='dropdown-content'>
+					  <li onclick="setSortOrder('date')"><a href="#">Date</a></li>
+					  <li onclick="setSortOrder('talk')"><a href="#">Talks</a></li>
+					  <li onclick="setSortOrder('competition')"><a href="#">Competitions</a></li>
+					  <li onclick="setSortOrder('event')"><a href="#">Events</a></li>
+					</ul>
+				
+				
+					<!-- Dropdown Trigger -->
+					<a class='dropdown-button btn col s4 waves-effect waves-purple #90caf9 blue lighten-3 newsfeed_options' href='#' data-activates='dropdown2'>Display By:{{displayType}}</a>
+					<!-- Dropdown Structure -->
+					<ul id='dropdown2' class='dropdown-content'>
+					  <li onclick="setDisplay('card')"><a href="#">Card</a></li>
+					  <li onclick="setDisplay('list')"><a href="#">List</a></li>
+					</ul>
+				
+			</div>
+
+			<div class="row">
+		      <ul class="tabs">
+		        <li class="tab col s3 "><a class="active" href="#newsEvents"><span class="newsfeed_words1">New evnts</span></a></li>
+		        <li class="tab col s3"><a  href="#featured"><span class="newsfeed_words1">Featured</span></a></li>
+		      </ul>
+		    </div>
+		    <div id="newsEvents" class="col s12">{{> newsfeed_firstTab}}</div>
+		    <div id="featured" class="col s12">{{> newsfeed_secondTab}}</div>
+
+		</div>
+
+</div>
+</div>
+</template>

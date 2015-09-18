@@ -1,0 +1,45 @@
+<template name="yearone">
+	<div class="row">
+		<h5>Semester One</h5>
+
+		<div class="col s12">
+		<!-- printing sem one mods -->
+		{{#each semOne}}
+			<div class="col s5 yearX_box">
+				<!-- gree color part -->
+				<a href="{{pathFor 'moduleForum'}}">
+					<div class="yearX_green col s12">
+						{{code}}	
+					</div>
+				</a>
+				<!-- white color part -->
+				<div class="yearX_white col s12">
+					<div class="col s12">
+						{{title}}	
+					</div>
+					<div class="col s12">
+						Preclusion: <br>
+						{{printArray preclusion}}
+					</div>
+					<div class="col s12">
+						Prerequisite: <br>
+						{{printArray prerequisite}}
+					</div>
+				</div>
+			</div>
+			<!-- 1 grid spacer in between each block -->
+			<div class="col s1"><br></div>
+		{{/each}}
+		</div>
+
+		<!-- printing sem two mods -->
+		<h5>Semester Two</h5>
+		<div class="col s12">
+		{{#each semTwo}}
+			<div class="col s6">
+				{{title}}
+			</div>
+		{{/each}}
+		</div>
+	</div>
+</template>

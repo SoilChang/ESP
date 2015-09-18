@@ -1,0 +1,52 @@
+<template name="header">
+
+	<div id="logoBanner">
+		<div class="row">
+			<img src="/images/utility/NUSlogo.png" class="col s3 m3 l3">
+			
+			<div class="col s5 m5 l5 right" id="header_loginDropdown">
+				{{>loginField}}
+			</div>
+			
+		</div>
+		
+	</div>
+	<nav>
+	    <div class="nav-wrapper #9ccc65 light-green lighten-1">
+	    	<!-- web logo -->
+	      <a href="{{pathFor 'home'}}" class="brand-logo"><img src="images/utility/espWordLogo.png" alt="ESP" width="140"></a>
+
+	      <!-- mobile logo -->
+	      <a href="{{pathFor 'home'}}" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+	      <!-- web display -->
+	      <ul class="right hide-on-med-and-down">
+	        <li><a href="{{pathFor 'home'}}">Home</a></li>
+	        <li><a href="{{pathFor 'modules'}}">Modules</a></li>
+	        <li><a href="{{pathFor 'leaderBoard'}}">LeaderBoard</a></li>
+	        <li><a href="{{pathFor 'espLion'}}">ESP Lion</a></li>
+	        <li><a href="#">Games</a></li>
+	        {{#if currentUser}}
+	        	{{#with loadOwnData}}
+	        		<li><a href="{{pathFor 'profile'}}">Profile</a></li>
+	        	{{/with}}
+	        {{/if}}
+	      </ul>
+
+	      <!-- mobile display -->
+	      <ul class="side-nav" id="mobile-demo">
+	        <li><a href="{{pathFor 'home'}}">Home</a></li>
+	        <li><a href="{{pathFor 'modules'}}">Modules</a></li>
+	        <li><a href="{{pathFor 'leaderBoard'}}">LeaderBoard</a></li>
+	        <li><a href="#">ESP Lion</a></li>
+	        <li><a href="#">Games</a></li>
+	        {{#if currentUser}}
+	        	{{#with loadOwnData}}
+	        <li><a href="{{pathFor 'profile'}}">Profile</a></li>
+	        	{{/with}}
+	        {{/if}}
+	      </ul>
+	    </div>
+	</nav>
+
+</template>

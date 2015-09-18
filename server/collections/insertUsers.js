@@ -6,7 +6,7 @@ var list = [
 		email:"a0133370@u.nus.edu",
 		year: 0,
 		matricYear: new Date(2014,8,1,0,0,0,0),
-		rank:"novice",
+
 		matricNumber:"A0133370R",
 		lastLogin:undefined,
 		rank:"novice",
@@ -19,10 +19,8 @@ var list = [
 		year: 0,
 		matricYear: new Date(2014,8,1,0,0,0,0),
 		password:"b0133370",
-		rank:"novice",
 		matricNumber:"B0133370R",
 		lastLogin:undefined,
-		exp: 0,
 	}
 ];
 
@@ -34,8 +32,6 @@ Accounts.onCreateUser(function(options,user){
 	user.lastLogin = new Date();
 	user.matricYear = list[i].matricYear;
 	user.matricNumber = list[i].matricNumber;
-	user.rank = list[i].rank;
-	user.exp = list[i].exp;
 	if(list[i].type === "undergraduate"){
 		user._id = list[i].matricNumber;	
 	}

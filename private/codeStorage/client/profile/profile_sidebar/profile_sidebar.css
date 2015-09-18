@@ -1,0 +1,7 @@
+#profile_logo{
+	background:url(/images/profile/profile_logo.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto; 
+	min-height:200px; 
+	min-width: 100%;
+}

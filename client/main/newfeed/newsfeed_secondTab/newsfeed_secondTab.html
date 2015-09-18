@@ -1,0 +1,33 @@
+<template name='newsfeed_secondTab'>
+	<div class="row">
+	{{#if cardView}}
+		{{#each newActivity}}
+		<div class="row">
+			<div class="card col s5  {{columnGenerator}}" >
+			   <div class="card-image waves-effect waves-block waves-light">
+			     <img class="activator" src="{{picture}}" >
+			   </div>
+			   <div class="card-content">
+			     <span class="card-title activator grey-text text-darken-4">{{title}}<i class="material-icons right">more_vert</i></span>
+			   </div>
+			   <div class="card-reveal">
+			     <span class="card-title grey-text text-darken-4">{{title}}<i class="material-icons right">close</i></span>
+			     <p>{{content}}</p>
+			   </div>
+			 </div>
+		</div>
+		{{/each}}
+	{{else}}
+		{{#each newActivity}}
+			<div class="col s12">		
+				<img src="{{icon}}" width="100" class="col s2" >
+				
+				<div class="col s10">
+					<h5>{{title}}</h5>
+					<p>{{content}}</p>
+				</div>
+			</div>
+		{{/each}}
+	{{/if}}		
+	</div>
+</template>

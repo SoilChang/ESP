@@ -1,12 +1,11 @@
 <template name="layout">
-	
-	<body class="container">
+	<body >
 		
 		<header>
 			{{>header}}
 		</header>
 		
-		<main>
+		<main id="backgroundSetter">
 			{{> yield "body"}}
 		</main>
 		
@@ -16,5 +15,4 @@
 		
 
 	</body>
-
 </template>

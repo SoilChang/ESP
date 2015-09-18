@@ -1,0 +1,14 @@
+#newsfeed_wrapper{
+	background-color: rgba(255, 255, 255, 0.7);
+/*	margin-left: 0px;
+	margin-right: 0px;*/
+}
+.newsfeed_options{
+	border:solid #0066FF 2px;
+}
+
+.newsfeed_words1{
+	color: #9966FF;
+	font-size: 20px;
+	font-family: cursive;
+}

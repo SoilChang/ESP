@@ -1,10 +1,6 @@
-main{
-	flex: 1 0 auto;
-	margin-top:-10px;
-}
-
-body{
-	display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+#backgroundSetter{
+	min-height: 2600px;
+	background-image: url(/images/utility/newsfeed_background.png); 
+    background-repeat: no-repeat;
+	background-size: 100% auto;
 }
