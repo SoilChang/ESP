@@ -31,19 +31,21 @@ Meteor.methods({
 		ModuleComments.insert(formData);
 
 	},
-	"likeComment":function(moduleCode){
+	"likeComment":function(moduleCode, _id){
 		check(moduleCode, String);
+		check(_id, String);
+
 		var currentUserId = Meteor.userId();
-		var likers = ModuleComments.findOne({under:moduleCode}).like;
+		var likers = ModuleComments.findOne({_id:_id}).like;
 		if(_.indexOf(likers,currentUserId) >= 0){
 			// if can find, remove pull the user out from the set
 			var newList = _.without(likers,currentUserId );
-			ModuleComments.update({under:moduleCode},{$set:{like: newList}});
+			ModuleComments.update({_id: _id},{$set:{like: newList}});
 			// ModuleComments.update({under:moduleCode},{$pull:{like:{$elemMatch:{currentUserId}}}});
 
 		}else{
 			// if can't find, insert the user
-			ModuleComments.update({under:moduleCode},{$addToSet:{like:currentUserId}});
+			ModuleComments.update({_id: _id},{$addToSet:{like:currentUserId}});
 		}
 	}
 });

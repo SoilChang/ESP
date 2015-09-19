@@ -1,0 +1,19 @@
+<template name="Module">
+<div class="row">
+	<div class="col s10 offset-s1" id="Module_wrapper">
+		<div class="col s3">
+			<div class="collection">
+	        	<a href="{{pathFor 'Module_year1'}}" class="collection-item">Year 1</a>
+	        	<a href="{{pathFor 'Module_year2'}}" class="collection-item">Year 2</a>
+	        	<a href="{{pathFor 'Module_year3'}}" class="collection-item">Year 3</a>
+	        	<a href="{{pathFor 'Module_year4'}}" class="collection-item">Year 4</a>
+	        	<a href="{{pathFor 'nusmod'}}" class="collection-item">Nusmod</a>
+	        </div>
+		</div>
+		<div class="col s9">
+			{{ >yield "moduleCenter"}}
+		</div>
+	</div>
+		
+</div>
+</template>

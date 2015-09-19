@@ -1,0 +1,43 @@
+#Module_wrapper{
+	background-color: rgba(255, 255, 255, 0.7);
+	min-height: 2000px;
+}
+.yearX_box{
+	border:solid black 3px;
+	border-radius: 10px;
+	height: 220px;
+}
+.yearX_green{
+	min-height: 30px;
+	background-color: #00CC66;
+	margin-left: -11px;
+	margin-right: -12px;
+	border-radius: 5px  5px  0px 0px;
+	text-align: center;
+}
+
+.yearX_white{
+	min-height: 70px;
+
+}
+
+.semesterLabel{
+	text-shadow:3px 3px 3px rgba(99,214,255,1);
+	font-weight:normal;
+	font-style:oblique;
+	text-transform:uppercase;
+	color:#28BF5F;
+	background-color:#ABFFD5;
+	border: 5px outset #70FFA9;
+	border-radius: 10px;
+	font-size:34px;
+	text-align:center;
+	font-family:arial black, sans-serif;
+	line-height:1;
+}
+
+.yearX_text{
+	font-family: cursive;
+	color: black;
+	
+}
