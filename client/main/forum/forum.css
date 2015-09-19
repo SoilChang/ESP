@@ -1,0 +1,31 @@
+#Forum_wrapper{
+	background-color: rgba(255, 255, 255, 0.7);
+	min-height: 2000px;
+}
+
+#Forum_welcomeMessage{
+	text-shadow:4px 5px 10px rgba(71,224,255,1);
+	font-weight:normal;color:#3460D9;
+	font-size:40px;
+	text-align:center;
+	font-family:arial black, sans-serif;
+	line-height:1
+}
+
+.post_category{
+	min-height: 100px;
+	background-color: #D2D2DC;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+}
+
+.post_cat_title{
+	font-family: cursive;
+	font-size: 20px;
+	color:black;
+	background-color: #0066FF;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border: double #0000FF 2px;
+}

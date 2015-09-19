@@ -1,3 +1,71 @@
 <template name="Forum">
+<div class="row">
+<div class="col s10 offset-s1" id="Forum_wrapper">
+
+	<!-- welcome message -->
+	<div class="row"><div class="col s8 offset-s3">
+		<span id="Forum_welcomeMessage">Welcome to the Forum</span>
+	</div></div>
+	
+	{{ >yield "forumSpace"}}
+
+</div>
+</div>
+</template>
+
+
+<template name="forumHomePage">
+
+	<!-- Subclub related -->
+	<div class="row post_category">
+		<div class="col s12 post_cat_title">
+			Subclub related
+		</div>
+		<hr>
+		<div class="col s12">
+			<a href="{{pathFor 'subclub_feedback'}}">Feedback</a>
+		</div>
+		<hr>
+		<div class="col s12">
+			Suggestions/propositions
+		</div>
+		<hr>
+	</div>
+
+	<!-- Module related -->
+	<div class="row post_category">
+		<div class="col s12 post_cat_title">
+			Module related
+		</div>
+		<hr>
+		<div class="col s12">
+			Complain
+		</div>
+		<hr>
+		<div class="col s12">
+			Inquiries
+		</div>
+		<hr>
+		<div class="col s12">
+			Suggestions
+		</div>
+		<hr>
+	</div>
+
+	<!-- Other Stuff -->
+	<div class="row post_category">
+		<div class="col s12 post_cat_title">
+			Other Stuff
+		</div>
+		<hr>
+		<div class="col s12">
+			Bug report
+		</div>
+		<hr>
+		<div class="col s12">
+			Feature Suggestions
+		</div>
+		<hr>
+	</div>
 
 </template>
